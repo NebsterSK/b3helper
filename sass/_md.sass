@@ -1,0 +1,22 @@
+@import 'variables'
+
+@media(min-width: 992px)
+  @each $size in $sizes
+    .md-p-#{$size}
+      padding: #{$size}px
+  
+    @each $key, $value in $sides
+      .md-p#{$key}-#{$size}
+        padding-#{$value}: #{$size}px
+  
+  @each $size in $sizes
+    .md-m-#{$size}
+      margin: #{$size}px
+  
+    @each $key, $value in $sides
+      .md-m#{$key}-#{$size}
+        margin-#{$value}: #{$size}px
+
+@each $key, $value in $alignments
+  .md-t-#{$key}
+    text-align: #{$value}

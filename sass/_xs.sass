@@ -1,0 +1,24 @@
+@import 'variables'
+
+*
+  overflow: auto
+
+@each $size in $sizes
+  .xs-p-#{$size}
+    padding: #{$size}px
+
+  @each $key, $value in $sides
+    .xs-p#{$key}-#{$size}
+      padding-#{$value}: #{$size}px
+
+@each $size in $sizes
+  .xs-m-#{$size}
+    margin: #{$size}px
+
+  @each $key, $value in $sides
+    .xs-m#{$key}-#{$size}
+      margin-#{$value}: #{$size}px
+
+@each $key, $value in $alignments
+  .xs-t-#{$key}
+    text-align: #{$value}
