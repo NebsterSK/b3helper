@@ -3,19 +3,19 @@
 @media(min-width: 1200px)
   @each $size in $sizes
     .lg-p-#{$size}
-      padding: #{$size}px
+      padding: #{$size}
   
     @each $key, $value in $sides
       .lg-p#{$key}-#{$size}
-        padding-#{$value}: #{$size}px
+        padding-#{$value}: #{$size}
   
   @each $size in $sizes
     .lg-m-#{$size}
-      margin: #{$size}px
+      margin: #{$size}
   
     @each $key, $value in $sides
       .lg-m#{$key}-#{$size}
-        margin-#{$value}: #{$size}px
+        margin-#{$value}: #{$size}
 
 @each $key, $value in $alignments
   .lg-t-#{$key}

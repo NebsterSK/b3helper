@@ -3,19 +3,19 @@
 @media(min-width: 768px)
   @each $size in $sizes
     .sm-p-#{$size}
-      padding: #{$size}px
+      padding: #{$size}
   
     @each $key, $value in $sides
       .sm-p#{$key}-#{$size}
-        padding-#{$value}: #{$size}px
+        padding-#{$value}: #{$size}
 
   @each $size in $sizes
     .sm-m-#{$size}
-      margin: #{$size}px
+      margin: #{$size}
   
     @each $key, $value in $sides
       .sm-m#{$key}-#{$size}
-        margin-#{$value}: #{$size}px
+        margin-#{$value}: #{$size}
 
 @each $key, $value in $alignments
   .sm-t-#{$key}
