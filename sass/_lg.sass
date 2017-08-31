@@ -1,22 +1,22 @@
 @import 'variables'
 
 @media(min-width: 1200px)
-  @each $size in $sizes
-    .lg-p-#{$size}
-      padding: #{$size}
+  @each $key, $value in $sizes
+    .lg-p-#{$key}
+      padding: #{$value}
   
-    @each $key, $value in $sides
-      .lg-p#{$key}-#{$size}
-        padding-#{$value}: #{$size}
+    @each $key2, $value2 in $sides
+      .lg-p#{$key2}-#{$key}
+        padding-#{$value2}: #{$value}
   
-  @each $size in $sizes
-    .lg-m-#{$size}
-      margin: #{$size}
+  @each $key, $value in $sizes
+    .lg-m-#{$key}
+      margin: #{$value}
   
-    @each $key, $value in $sides
-      .lg-m#{$key}-#{$size}
-        margin-#{$value}: #{$size}
-
-@each $key, $value in $alignments
-  .lg-t-#{$key}
-    text-align: #{$value}
+    @each $key2, $value2 in $sides
+      .lg-m#{$key2}-#{$key}
+        margin-#{$value2}: #{$value}
+  
+  @each $key, $value in $alignments
+    .lg-t-#{$key}
+      text-align: #{$value}

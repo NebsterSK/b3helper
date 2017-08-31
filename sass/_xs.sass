@@ -3,21 +3,21 @@
 *
   overflow: auto
 
-@each $size in $sizes
-  .xs-p-#{$size}
-    padding: #{$size}
+@each $key, $value in $sizes
+  .xs-p-#{$key}
+    padding: #{$value}
 
-  @each $key, $value in $sides
-    .xs-p#{$key}-#{$size}
-      padding-#{$value}: #{$size}
+  @each $key2, $value2 in $sides
+    .xs-p#{$key2}-#{$key}
+      padding-#{$value2}: #{$value}
 
-@each $size in $sizes
-  .xs-m-#{$size}
-    margin: #{$size}
+@each $key, $value in $sizes
+  .xs-m-#{$key}
+    margin: #{$value}
 
-  @each $key, $value in $sides
-    .xs-m#{$key}-#{$size}
-      margin-#{$value}: #{$size}
+  @each $key2, $value2 in $sides
+    .xs-m#{$key2}-#{$key}
+      margin-#{$value2}: #{$value}
 
 @each $key, $value in $alignments
   .xs-t-#{$key}
